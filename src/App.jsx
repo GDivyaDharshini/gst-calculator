@@ -6,6 +6,8 @@ function App() {
   const [gst, setGst] = useState(18);
 
   const gstAmount = (amount * gst) / 100;
+  const cgst = gstAmount / 2;
+  const sgst = gstAmount / 2;
   const totalAmount = Number(amount) + gstAmount;
 
   return (
@@ -29,6 +31,8 @@ function App() {
 
         <div className="result">
           <h3>GST Amount: ₹{gstAmount.toFixed(2)}</h3>
+          <h3>CGST: ₹{cgst.toFixed(2)}</h3>
+          <h3>SGST: ₹{sgst.toFixed(2)}</h3>
           <h2>Total Amount: ₹{totalAmount.toFixed(2)}</h2>
         </div>
       </div>
